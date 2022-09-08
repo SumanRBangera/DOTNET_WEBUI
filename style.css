@@ -1,0 +1,149 @@
+*{
+    box-sizing: border-box;
+}
+.main{
+    width:100%;
+    float:center;
+}
+.header{
+    text-align: center;
+    color: crimson;
+    background-color: rgb(233, 185, 195);
+    border: 1px  crimson;
+    padding: 5px;
+    
+}
+
+.left{
+    width:20%;
+    height: 500px;
+    background-color: rgb(235, 137, 157);
+    border: 3px solid crimson;
+    float: left;
+}
+.center{
+    width:50%;
+    height: 500px;
+    background-color: rgb(240, 218, 222);
+    border: 2px solid crimson;
+    float: left;
+}
+.right{
+    width:30%;
+    height: 500px;
+    background-color: rgb(160, 100, 112);
+    border: 3px solid crimson;
+    float: left;
+}
+.vertical{
+    list-style-type: none;
+    margin-top: 100px;
+    padding: 5px;
+    width: 100px;
+    position: sticky;
+    overflow: auto;
+    height: 100%;
+}
+
+li a.verticalnav{
+    display: block;
+    color: rgb(54, 5, 15);
+    text-align: left;
+    font-size: large;
+    text-decoration: none;
+}
+
+
+#active{
+    background-color: rgb(197, 64, 91);
+}
+#active:hover{
+    background-color: rgb(126, 64, 77);
+}
+
+
+.footer{
+    text-align: center;
+    background-color: rgb(192, 16, 51);
+    border: 2px solid rgb(62, 3, 15);
+    color: rgb(70, 5, 18);
+    padding: 5px;
+    
+}
+
+@media screen and (max-width:1000px)
+        {
+            iframe{
+                height:80px;
+                width:80px;
+            }
+            li a.verticalnav{
+            display:block;
+            color:rgb(139, 0, 139);
+            text-align: left;
+            padding: 5px 5px;
+            text-decoration: none;
+            font-size: 18px;
+            
+        }
+        
+        img{
+            height:300px;
+                width:300px;
+        }
+        .ul_media{
+            display:none;
+        }
+        }
+        @media screen and (max-width:800px)
+        {
+            iframe{
+                height:100px;
+                width:100px;
+            }
+            li a.verticalnav{
+            display:block;
+            color:rgb(0, 139, 7);
+            text-align: left;
+            padding: 5px 5px;
+            text-decoration: none;
+            font-size: 10px;
+        }
+        
+        .media{
+            display:none;
+        }
+        img{
+            height:300px;
+                width:300px;
+        }
+        .ul_media{
+            display:none;
+        }
+        }
+        @media screen and (max-width:600px)
+        {
+            iframe{
+                height:50px;
+                width:50px;
+            }
+            li a.verticalnav{
+            display:block;
+            color:rgb(139, 0, 0);
+            text-align: left;
+            padding: 5px 5px;
+            text-decoration: none;
+            font-size: 8px;
+        }
+        img{
+            height:300px;
+                width:300px;
+        }
+        .media{
+            display:none;
+        }
+        
+        .ul_media{
+            display:none;
+        }
+        }

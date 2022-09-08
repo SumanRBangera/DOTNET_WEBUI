@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRATION FORM</title>
+    <style>
+        .form{
+            background-color: rgb(165, 14, 44); margin-left:400px;
+            margin-right:400px; 
+            border-radius: 10px 15px 20px 25px;
+        }
+        label{
+            color: rgb(54, 5, 14);
+            
+            font-size: larger;
+        }
+        #button{
+            margin-left: 225px;
+            color: rgb(35, 5, 5);
+            background-color: rgb(129, 15, 37);
+            border-radius: 10px ;
+            width: 100px;
+            height: 30px;
+            font-size: larger;
+        }
+        h1{
+            text-align:center; 
+            background-color: rgb(165, 14, 44); 
+            margin-left:400px;
+            margin-right:400px; 
+            border-radius: 10px 10px 25px 25px;
+        }
+        
+    </style>
+</head>
+<body style="background-image: url('assets/dd.jpg'); background-repeat: no-repeat; background-attachment: fixed;background-size: 100% 100%;">
+    <div class="divv">
+        <h1 >REGISTRATION FORM</h1>
+    </div>
+    
+    <form action="">
+    <fieldset class="form">
+        <label><b>First Name</b></label><br>
+        <input  type="text" name="fname" style="width: 500px;padding: 5px;" required><br>
+        <label><b>Second Name</b></label><br>
+        <input  type="text" name="fname" style="width: 500px;padding: 5px;" required><br>
+        <label><b>Email</b></label><br>
+        <input  type="email" name="email" style="width: 500px;padding: 5px;" required><br>
+        <label><b>Passowrd</b></label><br>
+        <input  type="password" name="password" style="width: 500px;padding: 5px;" required><br>
+        <label><b>Gender</b></label><br>
+        <input  type="radio" name="Gender" value="Male" />Female
+        
+        <input  type="radio" name="Gender" value="Female" />Male<br>
+      
+        <input id="button" type="submit" value="Register"><br>
+        
+    </fieldset>
+    </form>
+</body>
+</html>
