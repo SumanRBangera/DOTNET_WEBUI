@@ -8,7 +8,7 @@
     <style>
         .form {
             border: rgb(176, 43, 102) 2px solid;
-            background-color: rgb(253, 143, 192);
+            background-color: rgb(245, 142, 188);
             padding-left: 20px;
             height: 350px;
             width: 30%;
@@ -31,20 +31,20 @@
             <label>Enter your Salary</label><br>
             <input type="number" name="salary" placeholder="Salary" required><br><br>
     
-            <label>Select Your Department</label><br>
-            <input type="radio" id="se" name="dept" value="SE">
-            <label for="se"> SE</label> <br>
-            <input type="radio" id="testing" name="dept" value="Testing">
-            <label for="testing"> Testing </label> <br>
+            <label>Select the Department</label><br>
             <input type="radio" id="it" name="dept" value="IT">
             <label for="it"> IT</label> <br>
-            <input type="radio" id="hr" name="dept" value="HR">
-            <label for="hr"> HR </label> <br><br>  
+            <input type="radio" id="testing" name="dept" value="Testing">
+            <label for="testing"> Testing </label> <br>
+            <input type="radio" id="Admin" name="dept" value="Admin">
+            <label for="Admin"> Admin</label> <br>
+            <input type="radio" id="Other" name="dept" value="Other">
+            <label for="Other"> Other </label> <br><br>  
             <input type="button" value="Check Bonus" onclick="processBonus(this.form)">
         </form>
         <br>
         <div class="formMsg">
-            <span>Total Salary=</span>
+            <span>Total Salary = </span>
             <b id="bonus"></b>
         </div>
     </div>
@@ -57,13 +57,13 @@
             var department = form.dept.value;
             var bonus;
             
-            if(department=="SE"){
+            if(department=="IT"){
                 bonus=salary+((salary*50)/100);
             }
             else if (department=="Testing") {
                 bonus=salary+((salary*45)/100);
             }
-            else if (department=="IT") {
+            else if (department=="Admin") {
                 
                 bonus=salary+((salary*30)/100);
             } 
