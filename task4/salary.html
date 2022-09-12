@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary</title>
+    <style>
+        .form {
+            border: rgb(176, 43, 102) 2px solid;
+            background-color: rgb(253, 143, 192);
+            padding-left: 20px;
+            height: 350px;
+            width: 30%;
+            margin-left: 30%;
+            margin-top: 10%;
+            float: left;
+            text-align: center;
+        }
+    
+        .formMsg {
+            font-size: 17px;
+            color:rgb(3, 16, 24);
+        }
+        </style>
+</head>
+<body>
+    <div class="form">
+        <h2 style="color: rgb(0, 23, 128); text-align:center">Calculate Bonus </h2>
+        <form>
+            <label>Enter your Salary</label><br>
+            <input type="number" name="salary" placeholder="Salary" required><br><br>
+    
+            <label>Select Your Department</label><br>
+            <input type="radio" id="se" name="dept" value="SE">
+            <label for="se"> SE</label> <br>
+            <input type="radio" id="testing" name="dept" value="Testing">
+            <label for="testing"> Testing </label> <br>
+            <input type="radio" id="it" name="dept" value="IT">
+            <label for="it"> IT</label> <br>
+            <input type="radio" id="hr" name="dept" value="HR">
+            <label for="hr"> HR </label> <br><br>  
+            <input type="button" value="Check Bonus" onclick="processBonus(this.form)">
+        </form>
+        <br>
+        <div class="formMsg">
+            <span>Total Salary=</span>
+            <b id="bonus"></b>
+        </div>
+    </div>
+    
+    <script>
+    
+        function processBonus(form) 
+        { 
+            var salary = parseInt(form.salary.value);
+            var department = form.dept.value;
+            var bonus;
+            
+            if(department=="SE"){
+                bonus=salary+((salary*50)/100);
+            }
+            else if (department=="Testing") {
+                bonus=salary+((salary*45)/100);
+            }
+            else if (department=="IT") {
+                
+                bonus=salary+((salary*30)/100);
+            } 
+            else{
+                bonus=salary+((salary*20)/100);
+            }
+            document.getElementById("bonus").innerHTML = bonus;
+        }
+    </script>
+</body>
+</html>

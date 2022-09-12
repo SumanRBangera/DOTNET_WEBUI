@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        .form {
+            border: rgb(176, 43, 102) 2px solid;
+            background-color: rgb(253, 143, 192);
+            padding-left: 20px;
+            height: 300px;
+            width: 30%;
+            margin-left: 30%;
+            margin-top: 10%;
+            float: left;
+            text-align: center;
+        }
+    
+        .formMsg {
+            font-size: 17px;
+            color:rgb(3, 16, 24);
+        }
+        </style>
+</head>
+<body>
+    <div class="form">
+        <h2 style="color: rgb(38, 21, 113); text-align:center">LOGIN PAGE</h2>
+        
+        <form>
+            <label>User Name</label><br>
+            <input type="text" name="username" placeholder="Enter User Name"required><br><br>
+            <label>Password</label><br>
+            <input type="password" name="password" placeholder="Enter Password" required><br><br>
+            
+            <input type="button" value="Submit" onclick="processData(this.form)">
+        </form>
+        <div class="formMsg">
+            <p id="status"> </p>
+        </div>
+    </div>
+
+    <script>
+        class Login {
+            display() {
+                return "Please Enter the Credentials! ";
+            }
+        }
+        
+        class Success extends Login {
+            
+            display() {
+                return "Login Successful";
+            }
+        }
+      
+        class Fail extends Login {
+           
+            display() {
+                return " Login Failed ";
+            }
+        }
+
+        function processData(form) 
+        { 
+            const ExistingUser="Sumanbangera" ; 
+            const ExistingPassword="bangera@123" ; 
+            var username = form.username.value;
+            var password = form.password.value;
+            var v;
+            
+            if(username=="" || password==""){
+                v = new Login();
+            }
+            else if (ExistingUser==username && ExistingPassword==password) {
+                v = new Success();
+            }
+            else if (ExistingUser!=username || ExistingPassword!=password) {
+                
+                v = new Fail();
+            } 
+            msg = v.display();
+            document.getElementById("status").innerHTML = msg;
+        }
+    </script>
+</body>
+</html>
